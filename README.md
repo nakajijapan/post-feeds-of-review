@@ -1,8 +1,5 @@
 
-# Post RSS Feeds in IRC
-
-
-
+# Post Feeds of App Reviews
 
 #### setting clon
 
