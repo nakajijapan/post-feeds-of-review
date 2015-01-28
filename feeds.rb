@@ -27,7 +27,6 @@ pp urls
 
 urls.each do |item|
 
-  pp item['url']
   feed = Feedjira::Feed.fetch_and_parse(item['url'])
 
   # using attributes
@@ -44,10 +43,7 @@ urls.each do |item|
 
     next if i == 0
 
-    #if updated >= 10.minute.ago
-    if updated >= now.yesterday
-
-        p entry.rating
+    if updated >= 10.minute.ago
 
         rating_image = ''
         for i in 1..entry.rating.to_i do
