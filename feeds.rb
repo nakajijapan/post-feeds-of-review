@@ -5,7 +5,6 @@ require 'feedjira'
 require 'active_support/all'
 require 'carrier-pigeon'
 
-
 module Feedjira
   module Parser
     # Parser for dealing with Atom feed entries.
@@ -30,20 +29,15 @@ urls.each do |item|
   feed = Feedjira::Feed.fetch_and_parse(item['url'])
 
   # using attributes
-  #   entry.title
-  #   entry.published
-  #   entry.author
-  #   entry.content
-  #   entry.rating
-  #   entry.version
   feed.entries.each_with_index do |entry, i|
 
     now = Time.now
-    updated = entry.published.getlocal
+    updated = entry.updated.getlocal
 
     next if i == 0
 
     if updated >= 10.minute.ago
+    #if updated >= 1.week.ago
 
         rating_image = ''
         for i in 1..entry.rating.to_i do
