@@ -1,0 +1,8 @@
+# config
+
+$IRC_CHANNEL    = ''
+$IRC_URL        = ''
+$IRC_ANOTHER_URL = ''
+
+$USE_IKACHAN = true
+$USE_IRC     = false
