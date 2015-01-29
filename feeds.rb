@@ -44,7 +44,7 @@ urls.each do |item|
           rating_image += "\u{2B50} "
         end
 
-        system("curl -F channel=\##{$IRC_CHANNEL} -F message=\"#{rating_image} [#{entry.version}] #{entry.author} #{entry.published}\" #{$IRC_URL}")
+        system("curl -F channel=\##{$IRC_CHANNEL} -F message=\"#{rating_image} [#{entry.version}] #{entry.author} #{entry.updated.getlocal}\" #{$IRC_URL}")
         system("curl -F channel=\##{$IRC_CHANNEL} -F message=\"#{entry.title} - #{entry.content} #{}\" #{$IRC_URL}")
 
     end
