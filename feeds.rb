@@ -36,8 +36,8 @@ urls.each do |item|
 
     next if i == 0
 
-    if updated >= 10.minute.ago
-    #if updated >= 1.week.ago
+    #if updated >= 10.minute.ago
+    if updated >= now.yesterday
 
         rating_image = ''
         for i in 1..entry.rating.to_i do
