@@ -1,7 +1,7 @@
 
 # Post Feeds of App Reviews
 
-#### setting clon
+#### setting cron
 
 ```bash
 export PATH="$HOME/.rbenv/bin:$PATH"
